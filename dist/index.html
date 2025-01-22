@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+</head>
+
+<body>
+
+
+    <div class="h-[100vh] w-full bg-[#0a146e] flex justify-center items-center p-[20px]">
+        <div class="p-[30px] rounded-2xl bg-white flex flex-col gap-[30px] max-[500px]:w-full">
+            <form id="form" class="grid grid-cols-3 gap-[20px] max-[690px]:grid-cols-2 max-[500px]:flex max-[500px]:flex-col">
+                <!-- amount -->
+                <label for="amount"
+                    class="flex flex-col gap-[2px] justify-start p-[10px] border rounded-md max-[690px]:col-span-2 max-[500px]:grid-cols-1">
+                    <span class="opacity-45 text-[14px] font-[500]">Amount</span>
+                    <input required id="amount" type="text" placeholder="$"
+                        class="border-none outline-none text-[20px] text-[#0a146e]">
+                </label>
+
+                <!-- from -->
+                <div class="flex flex-col gap-[2px] justify-start p-[10px] border rounded-md">
+                    <span class="opacity-45 text-[14px] font-[500]">From</span>
+                    <div class="flex gap-[10px] items-center">
+                        <span class="fi fi-us !text-[20px]"></span>
+                        <h1 class="text-[#0a146e] font-[500]">USD - US Dollar</h1>
+                    </div>
+                </div>
+
+                <!-- to -->
+                <label for="country" class="flex flex-col gap-[2px] justify-start p-[10px] border rounded-md">
+                    <span class="opacity-45 text-[14px] font-[500]">To</span>
+                    <div class="flex gap-[10px] items-center">
+                        <select id="country" class="h-full w-full outline-none border-none  text-[#0a146e] font-[500]">
+                        </select>
+                    </div>
+                </label>
+
+                <button
+                    class="bg-[#0a146e] text-white p-[20px] rounded-xl font-[600] col-span-3 max-[690px]:col-span-2 max-[500px]:grid-cols-1 active:scale-[.99]">Convert</button>
+            </form>
+
+            <h1 class="select-none text-[30px] opacity-75 "><span id="usd">0</span> USD = <span
+                    id="selectedCurr">0</span></h1>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+
+</html>
