@@ -1,7 +1,7 @@
 {
     "rewrites": [
         {
-            "source": "./src/*.*",
+            "source": "./src/*.css",
             "destination": "./dist/index.html"
         }
     ]
